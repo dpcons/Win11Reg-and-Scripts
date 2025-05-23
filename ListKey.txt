@@ -23,3 +23,5 @@ Hide_Onedrive_Folder.reg
 Hide_Search_Taskbar.reg
 Launch_File_Explorer_To_This_PC.reg
 Show_Extensions_For_Known_File_Types.reg
+
+Windows Update
