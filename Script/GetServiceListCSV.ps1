@@ -1,2 +1,0 @@
-Get-Service | Select-Object Name, StartType, Status | Export-Csv -Path "ServiceList.csv" -NoTypeInformation -Encoding UTF8
-Write-Host "File CSV 'ServicesList.csv' creato correttamente in questa cartella." -ForegroundColor Green
