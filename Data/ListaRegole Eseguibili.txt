@@ -1,0 +1,53 @@
+Azione	Utente	Nome	Condizione	Eccezioni
+Consenti	Everyone	(Regola predefinita) Tutti i file nella cartella Programmi	Percorso	
+Consenti	Everyone	(Regola predefinita) Tutti i file nella cartella Windows	Percorso	
+Consenti	BUILTIN\Administrators	(Regola predefinita) Tutti i file	Percorso	
+Consenti	Everyone	Program Files: ms-teams.exe	Hash file	
+Nega	Everyone	Program Files: CrossDeviceSettingsHost.exe	Hash file	
+Consenti	Everyone	Program Files: MICROSOFT® WINDOWS® OPERATING SYSTEM firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Nega	Everyone	Program Files: WidgetService.exe	Hash file	
+Consenti	Everyone	Program Files: QUICK ASSIST firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Consenti	Everyone	Program Files: Microsoft.Media.Player.exe	Hash file	
+Consenti	Everyone	Program Files: PhoneExperienceHost.exe	Hash file	
+Nega	Everyone	Program Files: SpeechToTextOverlay64-Retail.exe	Hash file	
+Nega	Everyone	Program Files: XboxIdp.exe	Hash file	
+Nega	Everyone	Program Files: GameBar.exe	Hash file	
+Consenti	Everyone	Program Files: TCUI-App.exe	Hash file	
+Consenti	Everyone	Program Files: elevate-shim.exe, OpenConsole.exe, TerminalAzBridge.exe...	Hash file	
+Nega	Everyone	Program Files: WinStore.App.exe	Hash file	
+Nega	Everyone	Program Files: StoreDesktopExtension.exe	Hash file	
+Nega	Everyone	Program Files: SoundRec.exe	Hash file	
+Consenti	Everyone	Program Files: Notepad.exe	Hash file	
+Nega	Everyone	Program Files: PilotshubApp.exe	Hash file	
+Nega	Everyone	Program Files: WindowsCamera.exe	Hash file	
+Consenti	Everyone	Program Files: CalculatorApp.exe	Hash file	
+Consenti	Everyone	Program Files: WINDOWS APP SDK firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Consenti	Everyone	Program Files: Time.exe	Hash file	
+Consenti	Everyone	Program Files: ClockWidgets.exe	Hash file	
+Consenti	Everyone	Program Files: Microsoft.Lightbox.exe	Hash file	
+Nega	Everyone	Program Files: DevHome.exe	Hash file	
+Nega	Everyone	Program Files: DevHome.exe	Hash file	
+Consenti	Everyone	Program Files: Microsoft.WebMediaExtensions.exe	Hash file	
+Nega	Everyone	Program Files: Todo.exe	Hash file	
+Consenti	Everyone	Program Files: StoreExperienceHost.exe	Hash file	
+Consenti	Everyone	Program Files: SecHealthUI.exe	Hash file	
+Consenti	Everyone	Program Files: SnippingTool.exe	Hash file	
+Consenti	Everyone	Program Files: PAD.Console.Host.exe	Hash file	
+Nega	Everyone	Program Files: mspaint.exe	Hash file	
+Nega	Everyone	Program Files: MICROSOFT OUTLOOK INSTALLER firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Consenti	Everyone	Program Files: XPDAGENT firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Consenti	Everyone	Program Files: StickyNotesStub.exe	Hash file	
+Nega	Everyone	Program Files: Microsoft.MicrosoftSolitaireCollection.exe, Solitaire.exe	Hash file	
+Consenti	Everyone	Program Files: LOCALBRIDGE firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Nega	Everyone	Program Files: MICROSOFT 365 (OFFICE) firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Nega	Everyone	Program Files: GetHelp.exe	Hash file	
+Nega	Everyone	Program Files: XboxStub.exe	Hash file	
+Consenti	Everyone	Program Files: AppInstaller.exe, AppInstallerFullTrustAppServiceClient.exe, AppInstallerPythonRedirector.exe...	Hash file	
+Nega	Everyone	Program Files: WeatherStub.exe	Hash file	
+Nega	Everyone	Program Files: MicrosoftBing.exe	Hash file	
+Nega	Everyone	Program Files: NewsStub.exe	Hash file	
+Nega	Everyone	Program Files: MICROSOFT EDGE UPDATE firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Nega	Everyone	Program Files: Clipchamp.CLI.exe, Clipchamp.exe	Hash file	
+Nega	Everyone	Program Files: Clipchamp.exe	Hash file	
+Consenti	Everyone	Program Files: MICROSOFT (R) WINDOWS (R) OPERATING SYSTEM firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
+Consenti	Everyone	Program Files: INTERNET EXPLORER firmato da O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US	Entità di pubblicazione	
