@@ -10,5 +10,10 @@ The XML file need to be named "Applock-Policy.XML"
 Create a file named "ServiceList.csv" reporting all the services Name, StartType, Status
 
 **UpdateServices**
-Get FIle created above and apply to a new machine that settings 
+Get File created above and apply to a new machine that settings 
 
+<p>
+<a href="https://github.com/dpcons/Win11Reg-and-Scripts/blob/main/Images/Esecuzione%20Update%20Service.png" 
+target="_blank">Output of UpdateServices</a>
+</a>
+</p>
