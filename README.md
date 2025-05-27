@@ -12,8 +12,7 @@ Create a file named "ServiceList.csv" reporting all the services Name, StartType
 **UpdateServices**
 Get File created above and apply to a new machine that settings 
 
-<p>
-<a href="https://github.com/dpcons/Win11Reg-and-Scripts/blob/main/Images/Esecuzione%20Update%20Service.jpg" 
-target="_blank">Output of UpdateServices</a>
-</a>
-</p>
+
+<br/>
+Output of UpdateServices <img width="45" src="https://github.com/dpcons/Win11Reg-and-Scripts/blob/main/Images/Esecuzione%20Update%20Service.jpg" style="vertical-align:middle">
+<br/>
