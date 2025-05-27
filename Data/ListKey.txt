@@ -1,0 +1,27 @@
+Align_Taskbar_Left.reg
+AllRegfile.reg
+Disable_AI_Recall.reg
+Disable_Bing_Cortana_In_Search.reg
+Disable_Chat_Taskbar.reg
+Disable_Copilot.reg
+Disable_Desktop_Spotlight.reg
+Disable_DVR.reg
+Disable_Enhance_Pointer_Precision.reg
+Disable_Give_access_to_context_menu.reg
+Disable_Include_in_library_from_context_menu.reg
+Disable_Lockscreen_Tips.reg
+Disable_Share_from_context_menu.reg
+Disable_Show_More_Options_Context_Menu.reg
+Disable_Start_Recommended.reg
+Disable_Sticky_Keys_Shortcut.reg
+Enable_End_Task.reg
+Hide_duplicate_removable_drives_from_navigation_pane_of_File_Explorer.reg
+Hide_Gallery_from_Explorer.reg
+Hide_Home_from_Explorer.reg
+Hide_Music_Folder.reg
+Hide_Onedrive_Folder.reg
+Hide_Search_Taskbar.reg
+Launch_File_Explorer_To_This_PC.reg
+Show_Extensions_For_Known_File_Types.reg
+
+Windows Update
