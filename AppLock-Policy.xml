@@ -658,6 +658,13 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
+    <FilePublisherRule Id="eff0aa5e-a9d8-4f01-bbea-b5910e9a6c0e" Name="MICROSOFT.ONEDRIVESYNC, versione 23081.416.0.0 e successive, da CN=MICROSOFT CORPORATION, O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="Regola per Onedrive Sync" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=MICROSOFT CORPORATION, O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT.ONEDRIVESYNC" BinaryName="*">
+          <BinaryVersionRange LowSection="23081.416.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
   </RuleCollection>
   <RuleCollection Type="Dll" EnforcementMode="NotConfigured" />
   <RuleCollection Type="Exe" EnforcementMode="NotConfigured">
@@ -1027,6 +1034,18 @@
       <Conditions>
         <FileHashCondition>
           <FileHash Type="SHA256" Data="0x02415B1C33BDB99D87055EF2DECC88BDFE030FCF0DD600A00E4E3B5C14726BE5" SourceFileName="CrossDeviceSettingsHost.exe" SourceFileLength="184832" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FilePathRule Id="6d9d31cd-b02b-42ab-bc2c-e9527d68f9ee" Name="C:\Windows\System32\OneDriveSetup.exe" Description="Blocco della funzionalità di Setup di Onedrive" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="C:\Windows\System32\OneDriveSetup.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FileHashRule Id="9adbfe57-8650-4567-85d5-c9ce97fe836a" Name="OneDrive.exe" Description="Regola per OneDrive" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x45B640CCF307641F565E02E57E0915E655D720FC31FEC324FFC88B4FCFB654E3" SourceFileName="OneDrive.exe" SourceFileLength="2602360" />
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
