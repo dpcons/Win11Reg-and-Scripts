@@ -14,5 +14,5 @@ Get File created above and apply to a new machine that settings
 
 
 <br/>
-Output of UpdateServices <img width="45" src="https://github.com/dpcons/Win11Reg-and-Scripts/blob/main/Images/Esecuzione%20Update%20Service.jpg" style="vertical-align:middle">
+Output of UpdateServices <img width="450" src="https://github.com/dpcons/Win11Reg-and-Scripts/blob/main/Images/Esecuzione%20Update%20Service.jpg" style="vertical-align:middle">
 <br/>
