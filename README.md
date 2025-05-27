@@ -10,7 +10,7 @@ The XML file need to be named "Applock-Policy.XML"
 Create a file named "ServiceList.csv" reporting all the services Name, StartType, Status
 
 **UpdateServices**
-Get File created above and apply to a new machine that settings 
+Get File created above and apply to a new machine that settings . It manage all the StartType value like Stopped, Manual, Automatic etc.
 
 
 <br/>
