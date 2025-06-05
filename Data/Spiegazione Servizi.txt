@@ -1,0 +1,5 @@
+cbdhsvc                 Clipboard History
+DevicesFlowUserSvc      connect and pair with WiFi displays and Bluetooth devices.
+DoSvc                   Ottimizzazione Recapito
+NPSMSvc                 This service is responsible for showing "now playing media" on the volume flyout on Windows 10 and on the action center on Windows 11
+UdkUserSvc              Servizio legato al Microsoft Store
