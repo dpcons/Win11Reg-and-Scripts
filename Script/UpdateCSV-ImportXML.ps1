@@ -1,24 +1,37 @@
+$logFile = ".\UpdateServices.log"
+
+function Write-Log {
+    param (
+        [string]$Message,
+        [string]$Color = "White"
+    )
+    # Scrivi su file
+    $Message | Out-File -FilePath $logFile -Append -Encoding UTF8
+    # Scrivi a video
+    Write-Host $Message -ForegroundColor $Color
+}
+
 Import-Csv -Path .\ServiceList.csv | ForEach-Object {
     $changed = $false
     $service = Get-Service -Name $_.Service -ErrorAction SilentlyContinue
 
     if (-not $service) {
-        Write-Host "Service $($_.Service) not found." -ForegroundColor Red
+        Write-Log "Service $($_.Service) not found." "Red"
         return
     }
 
     if ($service.StartType -ne $_.StartType) {
-        Write-Host "Changing StartType for service $($service.Name)" -ForegroundColor Yellow
+        Write-Log "Changing StartType for service $($service.Name)" "Yellow"
         try {
             $service | Set-Service -StartupType $_.StartType -ErrorAction Stop
             $changed = $true
         } catch {
-            Write-Host "Error changing StartType for $($service.Name): $_" -ForegroundColor Red
+            Write-Log "Error changing StartType for $($service.Name): $_" "Red"
         }
     }
 
     if ($service.Status -ne $_.Status) {
-        Write-Host "Changing Status for service $($service.Name)" -ForegroundColor Yellow
+        Write-Log "Changing Status for service $($service.Name)" "Yellow"
         try {
             if ($_.Status -eq "Running") {
                 Start-Service -Name $service.Name -ErrorAction Stop
@@ -27,17 +40,16 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
             }
             $changed = $true
         } catch {
-            Write-Host "Error changing Status for $($service.Name): $_" -ForegroundColor Red
+            Write-Log "Error changing Status for $($service.Name): $_" "Red"
         }
     }
 
     if ($changed) { 
         $service = Get-Service -Name $_.Service 
-        Write-Host "Service: $($service.Name) - StartType: $($service.StartType) - Status: $($service.Status) updated." -ForegroundColor Green
+        Write-Log "Service: $($service.Name) - StartType: $($service.StartType) - Status: $($service.Status) updated." "Green"
     } else {
-        Write-Host "No changes for service $($service.Name)." -ForegroundColor Cyan
+        Write-Log "No changes for service $($service.Name)." "Cyan"
     }
 }
-
 
 Set-AppLockerPolicy -XMLPolicy Applock-Policy.XML
