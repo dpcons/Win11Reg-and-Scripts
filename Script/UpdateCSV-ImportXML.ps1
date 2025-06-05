@@ -25,7 +25,7 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
     if ($service.StartType -ne $_.StartType) {
         Write-Host "Changing StartType for service $($service.Name)" -ForegroundColor Yellow
         try {
-            $service | Set-Service -StartupType $_.StartType -ErrorAction Stop -Force
+            $service | Set-Service -StartupType $_.StartType -ErrorAction Stop
             $changed = $true
         } catch {
             $logMsg = "Error changing StartType for $($service.Name): $_"
