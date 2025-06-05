@@ -58,7 +58,6 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
     } else {
         $logMsg = "No changes for service $($service.Name)."
         Write-Host $logMsg -ForegroundColor Cyan
-        Write-Log $logMsg
     }
 }
 
