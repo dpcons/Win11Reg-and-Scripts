@@ -38,9 +38,9 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
         Write-Host "Changing Status for service $($service.Name)" -ForegroundColor Yellow
         try {
             if ($_.Status -eq "Running") {
-                Start-Service -Name $service.Name -ErrorAction Stop -Force
+                Start-Service -Name $service.Name -Force -ErrorAction Stop
             } elseif ($_.Status -eq "Stopped") {
-                Stop-Service -Name $service.Name -ErrorAction Stop -Force
+                Stop-Service -Name $service.Name -Force -ErrorAction Stop
             }
             $changed = $true
         } catch {
