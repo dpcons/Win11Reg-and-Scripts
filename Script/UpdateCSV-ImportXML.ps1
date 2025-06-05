@@ -1,5 +1,8 @@
 $logFile = ".\UpdateServices.log"
 
+# Sovrascrive il file di log (lo svuota all'avvio dello script)
+"" | Out-File -FilePath $logFile -Encoding UTF8
+
 function Write-Log {
     param (
         [string]$Message
