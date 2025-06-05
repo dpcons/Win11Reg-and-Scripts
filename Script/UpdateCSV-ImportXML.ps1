@@ -13,7 +13,9 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
     $service = Get-Service -Name $_.Service -ErrorAction SilentlyContinue
 
     if (-not $service) {
-        Write-Host "Service $($_.Service) not found." -ForegroundColor Red
+        $logMsg = "Service $($_.Service) not found."
+        Write-Host $logMsg -ForegroundColor Red
+        Write-Log $logMsg
         return
     }
 
@@ -23,8 +25,10 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
             $service | Set-Service -StartupType $_.StartType -ErrorAction Stop
             $changed = $true
         } catch {
-            Write-Host "Error changing StartType for $($service.Name): $_" -ForegroundColor Red
-        }
+            $logMsg = "Error changing StartType for $($service.Name): $_"
+            Write-Host $logMsg -ForegroundColor Red
+            Write-Log $logMsg
+       }
     }
 
     if ($service.Status -ne $_.Status) {
@@ -37,7 +41,9 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
             }
             $changed = $true
         } catch {
-            Write-Host "Error changing Status for $($service.Name): $_" -ForegroundColor Red
+            $logMsg ="Error changing Status for $($service.Name): $_"
+            Write-Host $logMsg -ForegroundColor Red
+            Write-Log $logMsg
         }
     }
 
@@ -47,7 +53,9 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
         Write-Host $logMsg -ForegroundColor Green
         Write-Log $logMsg
     } else {
-        Write-Host "No changes for service $($service.Name)." -ForegroundColor Cyan
+        $logMsg = "No changes for service $($service.Name)."
+        Write-Host $logMsg -ForegroundColor Cyan
+        Write-Log $logMsg
     }
 }
 
