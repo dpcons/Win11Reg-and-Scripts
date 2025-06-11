@@ -70,7 +70,7 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <FilePublisherRule Id="33721044-fba4-496f-a7f1-d0973b2fce1b" Name="App in pacchetto: Microsoft.WindowsCamera firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FilePublisherRule Id="33721044-fba4-496f-a7f1-d0973b2fce1b" Name="App in pacchetto: Microsoft.WindowsCamera firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.WindowsCamera" BinaryName="*">
           <BinaryVersionRange LowSection="2023.2312.0.0" HighSection="*" />
@@ -182,7 +182,7 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <FilePublisherRule Id="6ffb6d74-6115-4b44-940b-ca26a53d564e" Name="App in pacchetto: Microsoft.Xbox.TCUI firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FilePublisherRule Id="6ffb6d74-6115-4b44-940b-ca26a53d564e" Name="App in pacchetto: Microsoft.Xbox.TCUI firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.Xbox.TCUI" BinaryName="*">
           <BinaryVersionRange LowSection="1.23.0.0" HighSection="*" />
@@ -546,7 +546,7 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <FilePublisherRule Id="9e542477-54f0-40c9-af38-297fab4c05ec" Name="App in pacchetto: Microsoft.SecHealthUI firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <FilePublisherRule Id="9e542477-54f0-40c9-af38-297fab4c05ec" Name="App in pacchetto: Microsoft.SecHealthUI firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.SecHealthUI" BinaryName="*">
           <BinaryVersionRange LowSection="1000.26100.0.0" HighSection="*" />
@@ -718,7 +718,7 @@
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
-    <FileHashRule Id="dc628aa4-d372-41ee-a706-1ca063382ed5" Name="Program Files: TCUI-App.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FileHashRule Id="dc628aa4-d372-41ee-a706-1ca063382ed5" Name="Program Files: TCUI-App.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FileHashCondition>
           <FileHash Type="SHA256" Data="0x67090533E78CE4D5811DA3A3A4C97093508A8B433B9B09DC984E4267A565C46B" SourceFileName="TCUI-App.exe" SourceFileLength="18944" />
@@ -764,7 +764,7 @@
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
-    <FileHashRule Id="d2e1dcb3-409a-4afe-943b-f84c06dd393f" Name="Program Files: ClockWidgets.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FileHashRule Id="d2e1dcb3-409a-4afe-943b-f84c06dd393f" Name="Program Files: ClockWidgets.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FileHashCondition>
           <FileHash Type="SHA256" Data="0x9FB727C054B7B04AA2AF168411ADAB12F9B56114C37BD0FFE9956CD93C5430B2" SourceFileName="ClockWidgets.exe" SourceFileLength="93184" />
@@ -867,13 +867,6 @@
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
-    <FileHashRule Id="cd08c124-f67b-4f53-9898-d33d06a21626" Name="Program Files: DevHome.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
-      <Conditions>
-        <FileHashCondition>
-          <FileHash Type="SHA256" Data="0xF865EBAA3398DB2842466F2931375D74498FF3F4ACBF140A6B4E9972D6AA4D4A" SourceFileName="DevHome.exe" SourceFileLength="192512" />
-        </FileHashCondition>
-      </Conditions>
-    </FileHashRule>
     <FileHashRule Id="165884b8-8e7c-4896-8608-c3cc90a57fae" Name="Program Files: Todo.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FileHashCondition>
@@ -884,14 +877,6 @@
     <FileHashRule Id="6c7772ad-357b-4776-b023-9abc0ba6d330" Name="Program Files: Clipchamp.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FileHashCondition>
-          <FileHash Type="SHA256" Data="0x25781A8515DE923228335092A1932B29A35B3548D93EA643147DD4D01F68080D" SourceFileName="Clipchamp.exe" SourceFileLength="2932736" />
-        </FileHashCondition>
-      </Conditions>
-    </FileHashRule>
-    <FileHashRule Id="2610cd42-a181-47cc-874d-c189b5383149" Name="Program Files: Clipchamp.CLI.exe, Clipchamp.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
-      <Conditions>
-        <FileHashCondition>
-          <FileHash Type="SHA256" Data="0xD746FE4C7300C1B1E79A830AB1800237FE1C18233190FC98AE9C4BD1BABF92F0" SourceFileName="Clipchamp.CLI.exe" SourceFileLength="35840" />
           <FileHash Type="SHA256" Data="0x25781A8515DE923228335092A1932B29A35B3548D93EA643147DD4D01F68080D" SourceFileName="Clipchamp.exe" SourceFileLength="2932736" />
         </FileHashCondition>
       </Conditions>
