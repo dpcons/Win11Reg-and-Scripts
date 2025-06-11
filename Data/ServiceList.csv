@@ -212,7 +212,7 @@
 "vmicvmsession","Manual","Stopped","Fornisce un meccanismo per gestire la macchina virtuale con PowerShell tramite una sessione di macchina virtuale senza una rete virtuale."
 "vmicvss","Manual","Stopped","Coordina le comunicazioni necessarie per utilizzare il Servizio Copia Shadow del volume per il backup delle applicazioni e dei dati della macchina virtuale dal sistema operativo del computer fisico."
 "VSS","Manual","Stopped","Gestisce e implementa le copie shadow del volume utilizzate a scopo di backup e altro. Se il servizio è stato arrestato, le copie shadow non saranno disponibili per il backup e il backup potrebbe non riuscire. Se il servizio è disabilitato, i servizi da esso dipendenti non verranno avviati."
-"W32Time","Manual","Stopped","Mantiene la sincronizzazione di data e ora su tutti i client e i server della rete. Se il servizio viene arrestato, la sincronizzazione data e ora non sarà disponibile. Se il servizio viene disabilitato, i servizi da esso dipendenti non verranno avviati."
+"W32Time","Auto","Running","Mantiene la sincronizzazione di data e ora su tutti i client e i server della rete. Se il servizio viene arrestato, la sincronizzazione data e ora non sarà disponibile. Se il servizio viene disabilitato, i servizi da esso dipendenti non verranno avviati."
 "WaaSMedicSvc","Manual","Stopped","No description available"
 "WalletService","Manual","Stopped","Ospita gli oggetti utilizzati dai client del portafoglio"
 "WarpJITSvc","Manual","Stopped","Enables JIT compilation support in d3d10warp.dll for processes in which code generation is disabled."

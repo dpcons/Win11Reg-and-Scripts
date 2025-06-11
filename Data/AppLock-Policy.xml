@@ -476,7 +476,7 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <FilePublisherRule Id="31abc329-ac70-420c-82c1-38d70663ba66" Name="App in pacchetto: Microsoft.Windows.StartMenuExperienceHost firmato da ms-resource:StartMenuExperienceHost/PublisherDisplayName" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <FilePublisherRule Id="31abc329-ac70-420c-82c1-38d70663ba66" Name="App in pacchetto: Microsoft.Windows.StartMenuExperienceHost firmato da ms-resource:StartMenuExperienceHost/PublisherDisplayName" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.Windows.StartMenuExperienceHost" BinaryName="*">
           <BinaryVersionRange LowSection="10.0.0.0" HighSection="*" />
@@ -711,7 +711,7 @@
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
-    <FileHashRule Id="5bceb482-0681-415c-b3e6-90a87a2a6c6b" Name="Program Files: PhoneExperienceHost.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FileHashRule Id="5bceb482-0681-415c-b3e6-90a87a2a6c6b" Name="Program Files: PhoneExperienceHost.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FileHashCondition>
           <FileHash Type="SHA256" Data="0x62002F759A0077B3CF4B2CB77985AD950BCB95F9C7043085F900BECC16E3F007" SourceFileName="PhoneExperienceHost.exe" SourceFileLength="316448" />
@@ -771,7 +771,7 @@
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
-    <FileHashRule Id="8c41e507-b246-4573-9729-36d7bbb6e25e" Name="Program Files: Microsoft.Lightbox.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FileHashRule Id="8c41e507-b246-4573-9729-36d7bbb6e25e" Name="Program Files: Microsoft.Lightbox.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FileHashCondition>
           <FileHash Type="SHA256" Data="0x8D158355997739419AA504902F5002301EB82218553AF44F9323056D8E9418D5" SourceFileName="Microsoft.Lightbox.exe" SourceFileLength="2010112" />
@@ -785,7 +785,7 @@
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
-    <FileHashRule Id="f0adeac4-880d-415d-887b-105577814073" Name="Program Files: StoreExperienceHost.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FileHashRule Id="f0adeac4-880d-415d-887b-105577814073" Name="Program Files: StoreExperienceHost.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FileHashCondition>
           <FileHash Type="SHA256" Data="0x6FE5EBCD34B96915E7D1E6E9F822FEF521A1F04649C7538DBA753DCC97E38309" SourceFileName="StoreExperienceHost.exe" SourceFileLength="20992" />
