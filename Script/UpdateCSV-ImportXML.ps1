@@ -61,4 +61,14 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
     }
 }
 
+Write-Host "Stop AppLock service" -ForegroundColor Red
+
+AppIdTel.exe Stop
+# Write-Host "Clean AppLock cache" -ForegroundColor yellow
+# .\pulizia_cache_applocker.ps1
+Write-Host "Set AppLock Policy" -ForegroundColor yellow
 Set-AppLockerPolicy -XMLPolicy Applock-Policy.XML
+
+Write-Host "Start AppLock service" -ForegroundColor Green
+AppIdTel.exe Start
+
