@@ -6,4 +6,6 @@ Sulla macchina obiettivo e' necessario configurare l'esecuzione di un task sched
 ![alt text](https://github.com/dpcons/Win11Reg-and-Scripts/blob/main/Images/TaskAppLock01.jpg)
 ![alt text](https://github.com/dpcons/Win11Reg-and-Scripts/blob/main/Images/TaskAppLock02.jpg)
 
-Lo script *UpdateCSV-ImportXML.ps1* deve essere eseguito **alla accensione della macchina** (prima del logon) i due file dei servizi e delle policy devono risiedere nella stassa folder dello script. L'esecuzione genera un log su file dell'esito delle operazioni *UpdateService.txt*.
+Lo script *UpdateCSV-ImportXML.ps1* deve essere eseguito **come Amministratore (o SYSTEM)** se possibile  **alla accensione della macchina** (prima del logon) i due file dei servizi e delle policy devono risiedere nella stassa folder dello script. L'esecuzione genera un log su file dell'esito delle operazioni *UpdateService.txt*.
+
+Quando si modificano servizi o policy e si applica lo script e' consigliabile riavviare la macchina (anche se dovrebbero applicarsi immediatamente le modifiche).
