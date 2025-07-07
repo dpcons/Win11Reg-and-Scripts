@@ -1,7 +1,9 @@
 $logFile = ".\UpdateServices.log"
+$logerrFile = ".\UpdateServices.err"
 
 # Sovrascrive il file di log (lo svuota all'avvio dello script)
 "" | Out-File -FilePath $logFile -Encoding UTF8
+"" | Out-File -FilePath $logerrFile -Encoding UTF8
 
 function Write-Log {
     param (
@@ -9,6 +11,14 @@ function Write-Log {
     )
     # Scrivi solo su file
     $Message | Out-File -FilePath $logFile -Append -Encoding UTF8
+}
+
+function Write-LogError {
+    param (
+        [string]$Message
+    )
+    # Scrivi solo su file
+    $Message | Out-File -FilePath $logerrFile -Append -Encoding UTF8
 }
 
 Import-Csv -Path .\ServiceList.csv | ForEach-Object {
@@ -31,6 +41,7 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
             $logMsg = "Error changing StartType for $($service.Name): $_"
             Write-Host $logMsg -ForegroundColor Red
             Write-Log $logMsg
+            Write-LogError $logMsg
        }
     }
 
@@ -47,6 +58,7 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object {
             $logMsg ="Error changing Status for $($service.Name): $_"
             Write-Host $logMsg -ForegroundColor Red
             Write-Log $logMsg
+            Write-LogError $logMsg
         }
     }
 
