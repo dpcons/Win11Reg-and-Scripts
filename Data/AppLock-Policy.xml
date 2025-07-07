@@ -399,12 +399,13 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <FilePublisherRule Id="33721044-fba4-496f-a7f1-d0973b2fce1b" Name="App in pacchetto: Microsoft.WindowsCamera firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <FilePublisherRule Id="31abc329-ac70-420c-82c1-38d70663ba66" Name="App in pacchetto: Microsoft.Windows.StartMenuExperienceHost firmato da ms-resource:StartMenuExperienceHost/PublisherDisplayName" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
-        <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.WindowsCamera" BinaryName="*">
-          <BinaryVersionRange LowSection="2023.2312.0.0" HighSection="*" />
+        <FilePublisherCondition PublisherName="CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.Windows.StartMenuExperienceHost" BinaryName="*">
+          <BinaryVersionRange LowSection="10.0.0.0" HighSection="*" />
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
+
   </RuleCollection>
 </AppLockerPolicy>
