@@ -1,0 +1,2 @@
+Get-AppLockerPolicy -Effective -XML > .\Effective.xml
+Get-ChildItem 'C:\Program Files\Microsoft Office\' -filter *.exe -Recurse | Convert-Path | Test-AppLockerPolicy -XMLPolicy .\Effective.xml -User contoso\zwie -Filter Denied,DeniedByDefault | Export-CSV .\BlockedFiles.csv
