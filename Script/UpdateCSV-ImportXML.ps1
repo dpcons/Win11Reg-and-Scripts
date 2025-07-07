@@ -1,61 +1,90 @@
 $logFile = ".\UpdateServices.log"
+$errlogFile = ".\UpdateServices.err"
 
 # Sovrascrive il file di log (lo svuota all'avvio dello script)
 "" | Out-File -FilePath $logFile -Encoding UTF8
+"" | Out-File -FilePath $errlogFile -Encoding UTF8
 
 function Write-Log {
-    param (
+    param 
+    (
         [string]$Message
     )
     # Scrivi solo su file
     $Message | Out-File -FilePath $logFile -Append -Encoding UTF8
 }
 
-Import-Csv -Path .\ServiceList.csv | ForEach-Object {
+function Write-ErrLog {
+    param 
+    (
+        [string]$Message
+    )
+    # Scrivi solo su file
+    $Message | Out-File -FilePath $logFile -Append -Encoding UTF8
+}
+
+
+Import-Csv -Path .\ServiceList.csv | ForEach-Object 
+{
     $changed = $false
     $service = Get-Service -Name $_.Service -ErrorAction SilentlyContinue
 
-    if (-not $service) {
+    if (-not $service) 
+    {
         $logMsg = "Service $($_.Service) not found."
         Write-Host $logMsg -ForegroundColor Red
         Write-Log $logMsg
         return
     }
 
-    if ($service.StartType -ne $_.StartType) {
+    if ($service.StartType -ne $_.StartType) 
+    {
         Write-Host "Changing StartType for service $($service.Name)" -ForegroundColor Yellow
-        try {
+        try 
+        {
             $service | Set-Service -StartupType $_.StartType -ErrorAction Stop
             $changed = $true
-        } catch {
+        } 
+        catch 
+        {
             $logMsg = "Error changing StartType for $($service.Name): $_"
             Write-Host $logMsg -ForegroundColor Red
             Write-Log $logMsg
+            Write-ErrLog $logMsg
        }
     }
 
-    if ($service.Status -ne $_.Status) {
+    if ($service.Status -ne $_.Status) 
+    {
         Write-Host "Changing Status for service $($service.Name)" -ForegroundColor Yellow
         try {
-            if ($_.Status -eq "Running") {
+            if ($_.Status -eq "Running") 
+            {
                 Start-Service -Name $service.Name -ErrorAction Stop
-            } elseif ($_.Status -eq "Stopped") {
+            } elseif ($_.Status -eq "Stopped") 
+            {
                 Stop-Service -Name $service.Name -ErrorAction Stop
             }
             $changed = $true
-        } catch {
+        } 
+        catch 
+        {
             $logMsg ="Error changing Status for $($service.Name): $_"
             Write-Host $logMsg -ForegroundColor Red
             Write-Log $logMsg
+            Write-ErrLog $logMsg
         }
     }
 
-    if ($changed) { 
+    if ($changed) 
+    { 
         $service = Get-Service -Name $_.Service 
         $logMsg = "Service: $($service.Name) - StartType: $($service.StartType) - Status: $($service.Status) updated."
         Write-Host $logMsg -ForegroundColor Green
         Write-Log $logMsg
-    } else {
+    } 
+    else 
+    {
         $logMsg = "No changes for service $($service.Name)."
         Write-Host $logMsg -ForegroundColor Cyan
     }
