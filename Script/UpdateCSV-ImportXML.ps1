@@ -5,7 +5,8 @@ $errlogFile = ".\UpdateServices.err"
 "" | Out-File -FilePath $logFile -Encoding UTF8
 "" | Out-File -FilePath $errlogFile -Encoding UTF8
 
-function Write-Log {
+function Write-Log 
+{
     param 
     (
         [string]$Message
@@ -14,7 +15,8 @@ function Write-Log {
     $Message | Out-File -FilePath $logFile -Append -Encoding UTF8
 }
 
-function Write-ErrLog {
+function Write-ErrLog 
+{
     param 
     (
         [string]$Message
@@ -57,7 +59,8 @@ Import-Csv -Path .\ServiceList.csv | ForEach-Object
     if ($service.Status -ne $_.Status) 
     {
         Write-Host "Changing Status for service $($service.Name)" -ForegroundColor Yellow
-        try {
+        try 
+        {
             if ($_.Status -eq "Running") 
             {
                 Start-Service -Name $service.Name -ErrorAction Stop
