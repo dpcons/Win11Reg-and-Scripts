@@ -392,7 +392,19 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <!-- ... rest of the file unchanged ... -->
+    <FilePublisherRule Id="eff0aa5e-a9d8-4f01-bbea-b5910e9a6c0e" Name="MICROSOFT.ONEDRIVESYNC, versione 23081.416.0.0 e successive, da CN=MICROSOFT CORPORATION, O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="Regola per Onedrive Sync" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=MICROSOFT CORPORATION, O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT.ONEDRIVESYNC" BinaryName="*">
+          <BinaryVersionRange LowSection="23081.416.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="33721044-fba4-496f-a7f1-d0973b2fce1b" Name="App in pacchetto: Microsoft.WindowsCamera firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.WindowsCamera" BinaryName="*">
+          <BinaryVersionRange LowSection="2023.2312.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
   </RuleCollection>
-  <!-- ... rest of the file unchanged ... -->
 </AppLockerPolicy>
