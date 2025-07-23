@@ -406,6 +406,13 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
+    <FileHashRule Id="9adbfe57-8650-4567-85d5-c9ce97fe836a" Name="OneDrive.exe" Description="Regola per OneDrive" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x45B640CCF307641F565E02E57E0915E655D720FC31FEC324FFC88B4FCFB654E3" SourceFileName="OneDrive.exe" SourceFileLength="2602360" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
 
   </RuleCollection>
 </AppLockerPolicy>
