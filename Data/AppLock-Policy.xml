@@ -14,7 +14,7 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <FilePublisherRule Id="05a13292-c5b3-4002-b721-d214ad4c5163" Name="App in pacchetto: Microsoft.Windows.Photos firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <FilePublisherRule Id="05a13292-c5b3-4002-b721-d214ad4c5163" Name="App in pacchetto: Microsoft.Windows.Photos firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.Windows.Photos" BinaryName="*">
           <BinaryVersionRange LowSection="*" HighSection="*" />
@@ -455,7 +455,7 @@
         </FilePublisherCondition>
       </Conditions>
     </FilePublisherRule>
-    <FilePublisherRule Id="acfffd81-dca5-4be9-b083-cebb10ae0777" Name="App in pacchetto: Microsoft.Paint firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <FilePublisherRule Id="acfffd81-dca5-4be9-b083-cebb10ae0777" Name="App in pacchetto: Microsoft.Paint firmato da Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.Paint" BinaryName="*">
           <BinaryVersionRange LowSection="*" HighSection="*" />
@@ -949,7 +949,7 @@
         </FileHashCondition>
       </Conditions>
     </FileHashRule>
-    <FileHashRule Id="9de6ffcd-7f13-470b-8e47-255046d5308e" Name="Program Files: mspaint.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <FileHashRule Id="9de6ffcd-7f13-470b-8e47-255046d5308e" Name="Program Files: mspaint.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FileHashCondition>
           <FileHash Type="SHA256" Data="0x396C757C8687E7F219FB5ED29F51192EB7B036B2E63085F91A5A122022454EA0" SourceFileName="mspaint.exe" SourceFileLength="2591744" />
