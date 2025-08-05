@@ -1,7 +1,6 @@
 ﻿"Service","StartType","Status","Description"
 "AarSvc","Manual","Stopped","Runtime for activating conversational agent applications"
 "ALG","Manual","Stopped","Fornisce supporto per plug-in di protocolli di terze parti per Condivisione connessione Internet"
-"AppIDSvc","Auto","Running","Determina e verifica l'identità di un'applicazione. La disabilitazione di questo servizio impedirà l'imposizione di AppLocker."
 "Appinfo","Manual","Running","Facilita l'esecuzione di applicazioni interattive con privilegi amministrativi aggiuntivi. Se questo servizio viene arrestato, gli utenti non potranno eseguire le applicazioni con i privilegi amministrativi aggiuntivi eventualmente necessari per lo svolgimento di determinate attività utente."
 "AppMgmt","Manual","Running","Elabora le richieste di installazione, rimozione ed enumerazione per il software distribuito tramite Criteri di gruppo. Se il servizio è disabilitato, non sarà possibile installare, rimuovere o enumerare il software distribuito tramite Criteri di gruppo né avviare i servizi che dipendono esplicitamente da esso."
 "AppReadiness","Manual","Stopped","Consente di preparare le app per l'utilizzo al primo accesso dell'utente al PC e all'aggiunta di nuove app."
