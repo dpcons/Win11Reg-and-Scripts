@@ -140,7 +140,6 @@
 "refsdedupsvc","Manual","Stopped","Servizio di deduplicazione e compressione dati ReFS per tenere traccia delle modifiche ai file ed eseguire processi di ottimizzazione pianificati."
 "RemoteAccess","Disabled","Stopped","Offre servizi di routing ad aziende in ambienti LAN e WAN."
 "RemoteRegistry","Auto","Running","Abilita gli utenti remoti alla modifica delle impostazioni del Registro di sistema del computer in uso. Se il servizio è stato arrestato, il Registro di sistema potrà essere modificato soltanto dagli utenti del computer. Se il servizio è disabilitato, i servizi da esso dipendenti non verranno avviati."
-"RetailDemo","Disabled","Stopped","Il servizio Demo negozio controlla l'attività del dispositivo quando si trova in modalità demo negozio."
 "RmSvc","Manual","Running","Servizio di gestione radio e modalità aereo"
 "RpcEptMapper","Auto","Running","Risolve gli identificatori di interfaccia RPC in endpoint del trasporto. Se il servizio viene arrestato o disabilitato, i programmi che utilizzano servizi RPC (Remote Procedure Call) non funzioneranno in modo corretto."
 "RpcLocator","Auto","Running","In Windows 2003 e versioni precedenti di Windows, il servizio Localizzatore RPC (Remote Procedure Call) gestisce il database del servizio nomi RPC. In Windows Vista e versioni successive di Windows, questo servizio non offre alcuna funzionalità ed è disponibile per compatibilità con le applicazioni."
