@@ -6,8 +6,6 @@
 "AppReadiness","Manual","Stopped","Consente di preparare le app per l'utilizzo al primo accesso dell'utente al PC e all'aggiunta di nuove app."
 "AppVClient","Disabled","Stopped","Manages App-V users and virtual applications"
 "AppXSvc","Manual","Stopped","Offre supporto infrastrutturale per la distribuzione di applicazioni dello Store. Questo servizio viene avviato su richiesta e, se disabilitato, le applicazioni dello Store non verranno distribuite nel sistema e potrebbero non funzionare correttamente."
-"ApxSvc","Manual","Stopped","Gestisce i dispositivi audio virtuali per i programmi basati su Windows.  Se il servizio viene arrestato, i dispositivi audio virtuali non funzioneranno correttamente.  Se questo servizio è disabilitato, non sarà possibile avviare tutti i servizi che dipendono esplicitamente da esso"
-"AssignedAccessManagerSvc","Manual","Stopped","Il servizio AssignedAccessManager supporta l'esperienza in modalità chiosco in Windows."
 "AudioEndpointBuilder","Auto","Running","Gestisce i dispositivi audio per il servizio Audio Windows. Se questo servizio viene arrestato, gli effetti e i dispositivi audio non funzioneranno correttamente. Se questo servizio viene disattivato, non sarà possibile avviare i servizi che dipendono da esso in modo esplicito"
 "Audiosrv","Auto","Running","Gestisce l'audio per le applicazioni basate su Windows. Se questo servizio viene arrestato, gli effetti e i dispositivi audio non funzioneranno correttamente. Se questo servizio viene disattivato, non sarà possibile avviare i servizi che dipendono da esso in modo esplicito."
 "autotimesvc","Manual","Stopped","Questo servizio imposta l'ora in base ai messaggi NITZ provenienti da una rete mobile"
