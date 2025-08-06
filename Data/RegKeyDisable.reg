@@ -1,0 +1,15 @@
+;OneDrive File Sync
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows]
+"DisableFileSyncNGSC"=dword:00000001
+
+;Windows Store
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsStore]
+"RemoveWindowsStore"=dword:00000001
+
+;Microsoft Photo
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoMicrosoftPhotos"=dword:00000001
+
+;XboxSpeechToTextOverlay
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.XboxSpeechToTextOverlay_8wekyb3d8bbwe]
+
