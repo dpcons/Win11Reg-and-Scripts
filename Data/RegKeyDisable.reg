@@ -185,6 +185,9 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 "EnableCdp"=dword:00000000
 
+; Disable Windows Store
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore]
+"RemoveWindowsStore"=dword:00000001
 
 
 
