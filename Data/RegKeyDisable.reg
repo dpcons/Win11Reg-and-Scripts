@@ -54,3 +54,57 @@
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun]
 "1"="Music.UI.exe"
+
+; Disable Xbox Identity Provider by removing its auto-start entries
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XboxIdentityProvider]
+
+; Optional: Disable Xbox services
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\XblAuthManager]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\XblGameSave]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\XboxNetApiSvc]
+"Start"=dword:00000004
+
+; Disable NarratorQuickStart
+[HKEY_CURRENT_USER\Software\Microsoft\Narrator\NoRoam]
+"QuickStartEnabled"=dword:00000000
+
+; Disable Power Automate 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PowerAutomateDesktop]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecHealthUI]
+"Start"=dword:00000004
+
+; Disable Office Hub
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MicrosoftOfficeHub]
+"Start"=dword:00000004
+
+; Disable Feedback Hub notifications
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"DoNotShowFeedbackNotifications"=dword:00000001
+
+; Optional: Disable automatic feedback requests
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
+"AllowTelemetry"=dword:00000000
+
+
+
+
+
+;Disable GetHelp (via APPX)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppLocker\PackagedAppRules]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppLocker\PackagedAppRules\{F3B5F3F1-9F3B-4A3F-9F3B-F3B5F3F3B5F3}]
+"Name"="Block Get Help"
+"Description"="Block Microsoft Get Help app"
+"UserOrGroupSid"="S-1-1-0"
+"Action"=dword:00000000
+"AppID"="Microsoft.GetHelp_8wekyb3d8bbwe!App"
+"Publisher"="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+"PackageFamilyName"="Microsoft.GetHelp_8wekyb3d8bbwe"
