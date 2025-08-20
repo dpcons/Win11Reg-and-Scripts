@@ -114,7 +114,91 @@
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IrisService]
 "Start"=dword:00000004
 
+; Disable Xbox Game Bar (GamingApp)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+"GameDVR_Enabled"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+; Optional: Disable Game Bar tips
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar]
+"ShowStartupPanel"=dword:00000000
+"AutoGameModeEnabled"=dword:00000000
+
+; Disable UndockedDevKit
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\UndockedDevKit]
+"EnableUndockedDevKit"=dword:00000000
+
+; Disable Parental control
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableUserControl"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Parental Controls]
+"Enabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Parental Controls\Users]
+"Filter On"=dword:00000000
+
+; Disable AsyncTextService
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Input\Settings]
+"EnableAsyncTextService"=dword:00000000
+
+; Disable DevHome
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot]
+"TurnOffWindowsCopilot"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DevHome]
+"EnableDevHome"=dword:00000000
+
+;Disable XboxGameCallableUI
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\GameCallout]
+"XboxGameCallableUI"=dword:00000000
+
+; Disable XboxGamingOverlay
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+"GameDVR_Enabled"=dword:00000000
+
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_Enabled"=dword:00000000
+
+; Disable Todos
+; Disable Microsoft To Do from auto-starting
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]
+"ToDo"=-
+
+; Block notifications from Microsoft To Do
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PushNotifications]
+"ToastEnabled"=dword:00000000
+
+; Optional: Hide To Do from Taskbar (if integrated via Widgets or Shell)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowTaskViewButton"=dword:00000000
+
+; Disable CrossDevice
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableCdp"=dword:00000000
+
+
+
+
+; Disable Windows Alarms & Clock app by setting AppLocker policy (works on Pro/Enterprise editions)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppLocker\Packaged app Rules]
+"DisableAlarmsClock"=dword:00000001
+
+; Optional: Prevent launching via shell
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Microsoft.WindowsAlarms_8wekyb3d8bbwe!App]
+@=""
+
+; Optional: Hide the app from Start menu (may not work on all versions)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{BEEB123C-7A3F-4D56-8F3F-3B6F1D1E2C9A}"=dword:00000001
 
 ; Disable GetHelp (via APPX)
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppLocker\PackagedAppRules]
