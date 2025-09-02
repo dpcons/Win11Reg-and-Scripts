@@ -27,18 +27,17 @@ DISM /Online /Add-Capability /CapabilityName:WMIC~~~~0.0.1.0 /Source:\\server\Fo
 PowerShell
 
 Add-WindowsCapability -Online -Name WMIC~~~~0.0.1.0 -Source "\\server\FoD\" -LimitAccess
-
-
-
-
 Dove \\server\FoD e' il folder dove viene posizionato il pacchetto .cab
 
 **Aggiornamento Driver**
 Lo script per effettuare l'upgrade dei driver e' ForceUpdateDrivers.ps1
 prima di lanciare lo script, editartelo inserendo il path corretto della cartella contenente tutti i driver di cui fare upgrade. salvare ed eseguire con diritti Administrator/System
 A corollario sono stati creati anche gli script:
+
 ElencaDriver.ps1 che elenca tutta la lista dei driver installati sulla macchina
+
 EliminaDriver.ps1 che va eseguito con la sintassi EliminaDriver -InfFileName "nomefile.inf"
+
 
 
 
