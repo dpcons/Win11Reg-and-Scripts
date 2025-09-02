@@ -28,6 +28,9 @@ PowerShell
 
 Add-WindowsCapability -Online -Name WMIC~~~~0.0.1.0 -Source "\\server\FoD\" -LimitAccess
 
+
+
+
 Dove \\server\FoD e' il folder dove viene posizionato il pacchetto .cab
 
 **Aggiornamento Driver**
