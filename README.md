@@ -21,8 +21,11 @@ Elenco dei servizi che abbiamo rilevato non attivarsi/disattivarsi o manifestare
 **Installazione Pacchetto WMI**
 Sotto la cartella \Data\WMI\ sono memorizzati i pacchetti relativi a Windows 11 24H2 nelle versioni it-IT e en-US, selezionare il pacchetto preferito a seconda della lingua. Per installare il pacchetto si puo' usare uno dei due seguenti metodi:
 DISM
+
 DISM /Online /Add-Capability /CapabilityName:WMIC~~~~0.0.1.0 /Source:\\server\FoD\ /LimitAccess
+
 PowerShell
+
 Add-WindowsCapability -Online -Name WMIC~~~~0.0.1.0 -Source "\\server\FoD\" -LimitAccess
 
 Dove \\server\FoD e' il folder dove viene posizionato il pacchetto .cab
