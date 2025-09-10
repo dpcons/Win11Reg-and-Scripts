@@ -29,6 +29,10 @@ PowerShell
 Add-WindowsCapability -Online -Name WMIC~~~~0.0.1.0 -Source "\\server\FoD\" -LimitAccess
 Dove \\server\FoD e' il folder dove viene posizionato il pacchetto .cab
 
+I pacchetti relativi a WMI sono distribuiti in una ISO a parte da quella dell'OS, denominata "Languages and Optional Features for Windows 11, version 24H2".
+Ovviamente ogni nuova versione ha una sua versione del disco.
+I pacchetti di WMIC sono reperibili sotto le cartelle
+
 **Aggiornamento Driver**
 Lo script per effettuare l'upgrade dei driver e' ForceUpdateDrivers.ps1
 prima di lanciare lo script, editartelo inserendo il path corretto della cartella contenente tutti i driver di cui fare upgrade. salvare ed eseguire con diritti Administrator/System
