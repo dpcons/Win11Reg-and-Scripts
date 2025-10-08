@@ -79,6 +79,63 @@ $AppPackages += 'Microsoft.YourPhone'
 $AppPackages += 'Microsoft.ZuneMusic'
 $AppPackages += 'Microsoft.ZuneVideo'
 
+# Added W11
+$AppPackages += "Microsoft.Windows.Photos"
+$AppPackages += "Microsoft.Windows.Camera"
+$AppPackages += "Microsoft.WindowsTerminal"
+$AppPackages += "Microsoft.WindowsSoundRecorder"
+$AppPackages += "Microsoft.WindowsStore"
+$AppPackages += "Microsoft.WindowsMaps"
+$AppPackages += "Microsoft.MicrosoftStickyNotes"
+$AppPackages += "Microsoft.BingNews"
+$AppPackages += "Microsoft.BingSports"
+$AppPackages += "Microsoft.MoviesTV"
+$AppPackages += "Microsoft.Windows.Cortana"
+$AppPackages += "Microsoft.WindowsCommunicationsApps"
+$AppPackages += "MicrosoftWindows.Client.CBS"
+$AppPackages += "Microsoft.StorePurchaseApp"
+$AppPackages += "Microsoft.ScreenSketch"
+$AppPackages += "MicrosoftWindows.LKG.DesktopSpotlight"
+$AppPackages += "Microsoft.AV1VideoExtension"
+$AppPackages += "MicrosoftWindows.LKG.AccountsService"
+$AppPackages += "Microsoft.OutlookForWindows"
+$AppPackages += "MicrosoftWindows.Client.Core"
+$AppPackages += "MicrosoftWindows.LKG.SpeechRuntime"
+$AppPackages += "Clipchamp.Clipchamp"
+$AppPackages += "MicrosoftCorporationII.QuickAssist"
+$AppPackages += "Microsoft.BingSearch"
+$AppPackages += "Microsoft.Windows.StartMenuExperienceHost"
+$AppPackages += "Microsoft.ApplicationCompatibilityEnhancements"
+$AppPackages += "Microsoft.Windows.XGpuEjectDialog"
+$AppPackages += "Windows.CBSPreview"
+$AppPackages += "Microsoft.MPEG2VideoExtension"
+$AppPackages += "Microsoft.Windows.SecureAssessmentBrowser"
+$AppPackages += "windows.immersivecontrolpanel"
+$AppPackages += "Microsoft.Copilot"
+$AppPackages += "Microsoft.AVCEncoderVideoExtension"
+$AppPackages += "Microsoft.Windows.PeopleExperienceHost"
+$AppPackages += "Microsoft.Windows.NarratorQuickStart"
+$AppPackages += "Microsoft.PowerAutomateDesktop"
+$AppPackages += "Microsoft.LockApp"
+$AppPackages += "Microsoft.VP9VideoExtensions"
+$AppPackages += "MicrosoftWindows.LKG.TwinSxS"
+$AppPackages += "Microsoft.Windows.AssignedAccessLockApp"
+$AppPackages += "MicrosoftWindows.LKG.IrisService"
+$AppPackages += "MicrosoftWindows.LKG.RulesEngine"
+$AppPackages += "Microsoft.Windows.PinningConfirmationDialog"
+$AppPackages += "Microsoft.Windows.DevHome"
+$AppPackages += "MICROSOFT.ONEDRIVESYNC" 
+$AppPackages += "Microsoft.Todos"
+$AppPackages += "Microsoft.ECApp"
+$AppPackages += "MicrosoftWindows.CrossDevice"
+
+
+
+
+
+
+
+
 Start-Sleep -Seconds 3
 WriteLog "OK."
 WriteLog "Inizio disinstallazione Appx..."
