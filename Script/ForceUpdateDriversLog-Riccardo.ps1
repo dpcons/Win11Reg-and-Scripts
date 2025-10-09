@@ -90,8 +90,12 @@ if (-not (Test-Path -Path $LogFolder)) {
 
 # Log file paths
 $mainLogFile = Join-Path $LogFolder "ForceUpdateDrivers_$logTimestamp.log"
-$errorLogFile = Join-Path $LogFolder "ForceUpdateDrivers_$logTimestamp.err"
+# $errorLogFile = Join-Path $LogFolder "ForceUpdateDrivers_$logTimestamp.err"
 $summaryLogFile = Join-Path $LogFolder "ForceUpdateDrivers_Summary.log"
+
+# Add a script-level variable to track if any errors occurred
+$script:hasErrors = $false
+$script:errorLogFile = $null
 
 #####################################################
 # Logging functions
@@ -123,11 +127,27 @@ function Write-LogMessage {
     
     # Write to error log if it's an error
     if ($Level -eq "ERROR") {
-        try {
-            Add-Content -Path $errorLogFile -Value $logEntry -Encoding UTF8 -ErrorAction Stop
+        # Create error log file only on first error
+        if (-not $script:hasErrors) {
+            $script:hasErrors = $true
+            $script:errorLogFile = Join-Path $LogFolder "ForceUpdateDrivers_$logTimestamp.err"
+            try {
+                # Create the error log file
+                "" | Out-File -FilePath $script:errorLogFile -Encoding UTF8 -Force
+            }
+            catch {
+                Write-Warning "Failed to create error log file: $_"
+            }
         }
-        catch {
-            Write-Warning "Failed to write to error log file: $_"
+        
+        # Write to error log
+        if ($script:errorLogFile) {
+            try {
+                Add-Content -Path $script:errorLogFile -Value $logEntry -Encoding UTF8 -ErrorAction Stop
+            }
+            catch {
+                Write-Warning "Failed to write to error log file: $_"
+            }
         }
     }
     
@@ -152,6 +172,12 @@ function Write-Summary {
     $endTime = Get-Date
     $duration = $endTime - $startTime
     
+    $errorLogInfo = if ($script:hasErrors -and $script:errorLogFile) {
+        "Error Log: $script:errorLogFile"
+    } else {
+        "Error Log: No errors occurred"
+    }
+
     $summaryContent = @"
 =====================================
 FORCE UPDATE DRIVERS - EXECUTION SUMMARY
@@ -178,7 +204,7 @@ SUCCESS RATE: $([math]::Round((($Results.Success + $Results.RebootRequired) / $R
 
 LOG FILES:
 Main Log: $mainLogFile
-Error Log: $errorLogFile
+$errorLogInfo
 Summary Log: $summaryLogFile
 
 =====================================
@@ -192,14 +218,13 @@ Summary Log: $summaryLogFile
         Write-LogMessage "Failed to write summary file: $_" -Level "ERROR"
     }
 }
-
 #####################################################
 # Main Script Execution
 #####################################################
 
 # Initialize log files
 "" | Out-File -FilePath $mainLogFile -Encoding UTF8 -Force
-"" | Out-File -FilePath $errorLogFile -Encoding UTF8 -Force
+# "" | Out-File -FilePath $errorLogFile -Encoding UTF8 -Force
 
 Write-LogMessage "*****************************************************************************" -Level "INFO"
 Write-LogMessage "* Poste Italiane - Certificazione Firenze - Riccardo De Santi" -Level "INFO"
@@ -497,7 +522,9 @@ Write-Summary -Results $results
 Write-LogMessage "" -Level "INFO"
 Write-LogMessage "Log files created:" -Level "INFO"
 Write-LogMessage "  Main log: $mainLogFile" -Level "INFO"
-Write-LogMessage "  Error log: $errorLogFile" -Level "INFO"
+if ($script:hasErrors -and $script:errorLogFile) {
+    Write-LogMessage "  Error log: $script:errorLogFile" -Level "INFO"
+}
 Write-LogMessage "  Summary: $summaryLogFile" -Level "INFO"
 
 $endTime = Get-Date
