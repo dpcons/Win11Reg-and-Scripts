@@ -342,6 +342,8 @@ if (-not (Test-Path -Path $DriverFolder)) {
 }
 
 # Check Spy file
+#Per renderlo generalizzato si puo' usare il seguente:
+# $spiaHPInfo = Join-Path $DriverFolder "Drivers_HP800G9\sp157369\src\HPInfo.txt"
 $spiaHPInfo = "C:\Temp\Update_Drivers_HP800G9\Drivers_HP800G9\sp157369\src\HPInfo.txt"
 $HashHPInfo = "848287874858B56AECC152F67F0D126B7F6B4D61FCE9FA4CFDAE20022D2FE7A3"
 if (-NOT (Test-Path $spiaHPInfo))
