@@ -441,6 +441,11 @@ foreach ($driver in $driverFiles) {
             Write-LogMessage "Driver $($driver.Name) - Successfully installed (reboot required)" -Level "SUCCESS"
             $results.RebootRequired++
         }
+        elseif ($exitCode -eq 259) {
+            # Exit code 259 means Not installed because already present so log it as skipped and not error
+            Write-LogMessage "Driver $($driver.Name) - Not installed (already present)" -Level "INFO"
+            $results.Skipped++
+        }
         else {
             # Check if the output indicates reboot is required despite non-zero exit code
             if ($pnpOutput -match "reboot.*required|restart.*required|requires.*reboot|requires.*restart") {
