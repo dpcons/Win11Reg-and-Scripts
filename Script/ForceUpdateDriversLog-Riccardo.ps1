@@ -513,7 +513,7 @@ Write-LogMessage "Failed installations: $($results.Failed)" -Level $(if ($result
 
 if ($results.Total -gt 0) {
     $successRate = [math]::Round((($results.Success + $results.RebootRequired) / $results.Total) * 100, 2)
-    Write-LogMessage "Success rate: $successRate%" -Level $(if ($successRate -ge 80) { "SUCCESS" } elseif ($successRate -ge 50) { "WARNING" } else { "ERROR" })
+    Write-LogMessage "Success rate: $successRate%" -Level $(if ($successRate -ge 80) { "SUCCESS" } elseif ($successRate -ge 50) { "WARNING" } else { "INFO" })
 }
 
 # Write summary to file
