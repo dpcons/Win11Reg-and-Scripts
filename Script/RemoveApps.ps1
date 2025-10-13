@@ -82,6 +82,7 @@ $AppPackages += 'Microsoft.ZuneVideo'
 # Added W11
 $AppPackages += "Microsoft.Windows.Photos"
 $AppPackages += "Microsoft.Windows.Camera"
+$AppPackages += "Microsoft.WindowsCamera"                # ADDED: Alternative Camera name
 $AppPackages += "Microsoft.WindowsTerminal"
 $AppPackages += "Microsoft.WindowsSoundRecorder"
 $AppPackages += "Microsoft.WindowsStore"
@@ -129,9 +130,10 @@ $AppPackages += "Microsoft.Todos"
 $AppPackages += "Microsoft.ECApp"
 $AppPackages += "MicrosoftWindows.CrossDevice"
 
-
-
-
+# ADDED: Missing Windows 11 packages
+$AppPackages += "Microsoft.GamingApp"                    # Main Gaming App (Windows 11)
+$AppPackages += "Microsoft.XboxGameCallableUI"           # Xbox Game Callable UI  
+$AppPackages += "Microsoft.Paint"                        # New Paint app for Windows 11
 
 
 
