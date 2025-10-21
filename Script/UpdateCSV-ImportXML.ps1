@@ -3,7 +3,11 @@ $logerrFile = ".\UpdateServices.err"
 
 # Sovrascrive il file di log (lo svuota all'avvio dello script)
 "" | Out-File -FilePath $logFile -Encoding UTF8
-"" | Out-File -FilePath $logerrFile -Encoding UTF8
+
+# Elimina il file di errori precedente se esiste
+if (Test-Path $logerrFile) {
+    Remove-Item $logerrFile -Force
+}
 
 function Write-Log {
     param (
@@ -17,6 +21,10 @@ function Write-LogError {
     param (
         [string]$Message
     )
+    # Crea il file di errori solo al primo errore
+    if (-not (Test-Path $logerrFile)) {
+        "" | Out-File -FilePath $logerrFile -Encoding UTF8
+    }
     # Scrivi solo su file
     $Message | Out-File -FilePath $logerrFile -Append -Encoding UTF8
 }
