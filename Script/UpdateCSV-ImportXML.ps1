@@ -71,8 +71,8 @@ if (-not $isAdmin) {
             $svcObj = Get-Service -Name $svc -ErrorAction SilentlyContinue
             if ($null -eq $svcObj) { Write-Log "[Freeze] Servizio $svc non trovato"; continue }
             if (-not $originalMap.ContainsKey($svc)) { $originalMap[$svc] = $svcObj.StartType }
-            try { if ($svcObj.Status -ne 'Stopped') { Stop-Service -Name $svc -Force -ErrorAction SilentlyContinue } } catch { Write-LogError "[Freeze] Errore stop $svc: $_" }
-            try { Set-Service -Name $svc -StartupType Disabled -ErrorAction SilentlyContinue } catch { Write-LogError "[Freeze] Errore disabilitando $svc: $_" }
+            try { if ($svcObj.Status -ne 'Stopped') { Stop-Service -Name $svc -Force -ErrorAction SilentlyContinue } } catch { Write-LogError "[Freeze] Errore stop $svc $_" }
+            try { Set-Service -Name $svc -StartupType Disabled -ErrorAction SilentlyContinue } catch { Write-LogError "[Freeze] Errore disabilitando $svc $_" }
         }
         $originalMap | ConvertTo-Json | Out-File -FilePath $startupJson -Encoding UTF8
         Write-Log '[Freeze] Servizi disabilitati e startup originali salvati'
@@ -138,7 +138,7 @@ if (-not $isAdmin) {
         $created = 0
         foreach ($d in $domains) {
             if ($existingFqdns -contains $d) { continue }
-            try { New-NetFirewallRule -DisplayName "Block WU $d" -Group $groupName -Direction Outbound -Action Block -RemoteFqdn $d -Profile Any -Enabled True -ErrorAction SilentlyContinue | Out-Null; $created++ } catch { Write-LogError "[Freeze] Errore creazione regola firewall $d: $_" }
+            try { New-NetFirewallRule -DisplayName "Block WU $d" -Group $groupName -Direction Outbound -Action Block -RemoteFqdn $d -Profile Any -Enabled True -ErrorAction SilentlyContinue | Out-Null; $created++ } catch { Write-LogError "[Freeze] Errore creazione regola firewall $d $_" }
         }
         Write-Log "[Freeze] Regole firewall create: $created"
 
