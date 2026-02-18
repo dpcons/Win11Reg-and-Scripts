@@ -103,9 +103,9 @@ try {
             $output += ""
             
             foreach ($commit in $commits) {
-                $output += "Commit: $($commit.FullHash)"
-                $output += "Author: $($commit.Author) <$($commit.Email)>"
-                $output += "Date:   $($commit.Date)"
+                $output += "Commit:  $($commit.FullHash)"
+                $output += "Author:  $($commit.Author) <$($commit.Email)>"
+                $output += "Date:    $($commit.Date)"
                 $output += "Message: $($commit.Message)"
                 $output += "-" * 80
             }
