@@ -12,6 +12,13 @@ Create a file named "ServiceList.csv" reporting all the services Name, StartType
 **UpdateServices**
 Get File created above and apply to a new machine that settings . It manage all the StartType value like Stopped, Manual, Automatic etc.
 
+**ExportGitCommits**
+Export the full commit history of a git repository to a file. Supports multiple output formats (TXT, CSV, JSON).
+Usage:
+- `.\ExportGitCommits.ps1` - Exports to CommitList.txt (default format)
+- `.\ExportGitCommits.ps1 -Format CSV` - Exports to CommitList.csv
+- `.\ExportGitCommits.ps1 -Format JSON -OutputPath "commits.json"` - Exports to custom JSON file
+
 **AllRegFiles.reg**
 In Data Folder this Reg file can be used for forcing several specific settings (Integrating what we implement with Services and AppLock)
 

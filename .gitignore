@@ -1,0 +1,7 @@
+# Output files from ExportGitCommits script
+CommitList.txt
+CommitList.csv
+CommitList.json
+
+# Other common output files
+ServiceList.csv
